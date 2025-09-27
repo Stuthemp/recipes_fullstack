@@ -52,8 +52,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authz -> authz
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/login/**").permitAll()
-                        .requestMatchers("/api/all_ingredients")
-                        .requestMatchers("/all_cook_processes")
+                        .requestMatchers("/api/all_ingredients").permitAll()
+                        .requestMatchers("/all_cook_processes").permitAll()
                         .anyRequest().authenticated()
                 );
 
