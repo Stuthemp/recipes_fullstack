@@ -1,0 +1,296 @@
+body {
+    background-color: #aaa;
+    padding: 3em;
+  }
+  .dog-head {
+    --color1: silver;
+    --color2: grey;
+    font-size: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 6em;
+    height: 4em;
+    background-color: var(--color1);
+    border-radius: 50% 50% 20% 20% / 70% 70% 30% 30%;
+    position: relative;
+    &.color-b {
+    --color1: #ffa409;
+    --color2: rosybrown;
+    }
+    &.color-c {
+    --color1: SLATEGRAY;
+    --color2: #555;
+    }
+  }
+  .dog-ears {
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 1.5em;
+      height: 1em;
+      border-radius: 50% 50% 0 0 / 80% 80% 0 0;
+      background-color: var(--color1);
+      position: absolute;
+    }
+    &::before {
+      top: 0;
+      left: 0;
+      transform: rotate(-45deg);
+    }
+    &::after {
+      top: 0;
+      right: 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  .hat {
+    display: block;
+    width: 2em;
+    height: 1em;
+    background-color: dodgerblue;
+    border-radius: 50% 50% 0 0 / 80% 80% 0 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -1em;
+    top: -.9em;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 2.3em;
+      height: .5em;
+      border-radius: 80% 20% / 80% 80%;
+      background-color: lightblue;
+      position: absolute;
+      bottom: -.4em;
+      left: -.3em;
+    }
+    &.hat-top {
+      background-color: black;
+      border-radius: .1em;
+      height: 2em;
+      top: -1.9em;
+
+      &::after {
+        width: 2.6em;
+        height: .5em;
+        border-radius: 10% 10% 50% 50%;
+        background-color: black;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: .6em;
+        background-color: red;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    &.hat-3 {
+      background-color: red;
+      border-radius: .1em;
+      height: .8em;
+      top: -.7em;
+  
+
+      &::after {
+        width: .6em;
+        height: .5em;
+        border-radius: .3em;
+        top: -1em;
+        left: .5em;
+        background-color: black;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: .2em;
+        height: 1em;
+        background-color: black;
+        position: absolute;
+        top: -1em;
+        left: .5em;
+      }
+    }
+  }
+  
+
+  .dog-eyes {
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      background-color: #000;
+      position: absolute;
+      animation: 1s wink alternate infinite;
+    }
+    &::before {
+      bottom: 1.5em;
+      left: 1em;
+    }
+    &::after {
+      bottom: 1.5em;
+      right: 1em;
+    }
+  }
+  .dog-snout-sad {
+    background-color: var(--color2);
+    width: 2em;
+    height: 1.5em;
+    box-sizing: border-box;
+    border-radius: 50% 50% 20% 20% / 70% 70% 30% 30%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1em;
+    
+    &::before {
+      content: '';
+      display: block;
+      width: .8em;
+      height: .5em;
+      background-color: #333;
+      border-radius: 30% 30% 50% 50%;
+      position: absolute;
+      top: .2em;
+      left: 50%;
+      margin-left: -.4em; 
+    }
+    
+    &::after {
+      content: '';
+      display: block;
+      box-sizing: border-box;
+      width: .8em;
+      height: .8em;
+      border-left: .1em solid #333;
+      border-top: .1em solid #333;
+      position: absolute;
+      top: .7em;
+      left: 50%;
+      margin-left: -.4em; 
+      transform: rotate(45deg);
+    }
+  }
+  
+  .dog-snout {
+    background-color: var(--color2);
+    width: 2em;
+    height: 1.5em;
+    box-sizing: border-box;
+    border-radius: 50% 50% 20% 20% / 70% 70% 30% 30%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1em;
+    
+    &::before {
+      content: '';
+      display: block;
+      width: .8em;
+      height: .5em;
+      background-color: #333;
+      border-radius: 30% 30% 50% 50%;
+      position: absolute;
+      top: .2em;
+      left: 50%;
+      margin-left: -.4em; 
+    }
+    
+    &::after {
+      content: '';
+      display: block;
+      box-sizing: border-box;
+      width: .8em;
+      height: .8em;
+      border-left: .1em solid #333;
+      border-top: .1em solid #333;
+      position: absolute;
+      top: .7em;
+      left: 50%;
+      margin-left: -.4em; 
+      transform: rotate(45deg);
+    }
+  }
+
+  .shiba {
+    &.dog-head {
+      border-radius: 50% 50% 30% 30% / 60% 60% 50% 50%;
+    }
+    .dog-ears {
+      &::before,
+      &::after {
+        width: 1.5em;
+        height: 1.5em;
+        box-sizing: border-box;
+        background-color: pink;
+        border: .3em solid var(--color1);
+        border-radius: 29% 71% 77% 23% / 32% 21% 79% 68%;
+      }
+      &::before {
+        transform: rotate(0deg);
+      }
+      &::after {
+        transform: rotate(180deg);
+        border-radius: 29% 77% 71%  23% / 32% 79% 21% 68%;
+      }
+    }
+    .dog-eyes {
+      &::before,
+      &::after {
+        width: 1em;
+        height: .6em;
+      }
+      &::before {
+        transform: rotate(15deg);
+      }
+      &::after {
+        transform: rotate(-15deg);
+      }
+    }
+    
+    .dog-snout {
+      border-radius: 50% 50% 30% 30% / 60% 60% 50% 50%;
+      background-color: white;
+      &::after {
+        border-radius: 0 0 50% 50%;
+        width: 1em;
+        height: .6em;
+        transform: rotate(0deg);
+        top: .9em;
+        left: 50%;
+        margin-left: -.5em; 
+        border: none;
+        background-color: PALEVIOLETRED;
+      }
+    }
+    .dog-snout-sad {
+      border-radius: 50% 50% 30% 30% / 60% 60% 50% 50%;
+      background-color: white;
+    
+      &::after {
+        border-radius: 50% 40%;
+        width: 1.2em;
+        height: 1.2em;
+        top: .3em;
+        left: 50%;
+        margin-left: -.6em; 
+        margin-top: .4em
+      }
+    }
+    
+  }
+  
+  @keyframes wink {
+    0% { transform: scaleY(.3); }
+    10% { transform: scaleY(1); }
+  }
+  

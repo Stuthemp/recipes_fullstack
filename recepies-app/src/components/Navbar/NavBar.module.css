@@ -1,0 +1,50 @@
+.whole {
+  display: flex;
+  flex-direction: row;           /* Buttons go horizontally */
+  align-items: center;
+  justify-content: flex-start;  /* Start buttons from the left */
+  height: 60px;                 /* Reasonable height for top bar */
+  width: 100%;                  /* Full width */
+  background-color: rgb(230, 230, 230);
+  position: fixed;              /* Stays at top while scrolling */
+  top: 0;                       /* Stick to the top */
+  left: 0;
+  padding: 0 16px;              /* Horizontal padding */
+  gap: 12px;                    /* Space between buttons */
+  z-index: 1000;                /* Ensure it's above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+}
+
+.buttonStyle {
+  height: 40px;                 /* Fits well in 60px bar */
+  min-width: 80px;              /* Minimum width for readability */
+  padding: 0 12px;              /* Horizontal padding */
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.optionButtons {
+    display: flex;
+    flex-direction: row; /* Ensure buttons stack vertically */
+    align-items: flex-start; /* Optionally adjust alignment of buttons */
+    height: auto; /* Adjust height to be auto to fit contents */
+    justify-content: flex-start; 
+}
+
+.hiddenElement {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Maintain spacing between items */
+}
+
+.dropdown {
+    padding: 10px;
+    font-size: 14px;
+}
