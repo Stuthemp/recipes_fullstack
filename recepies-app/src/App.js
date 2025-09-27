@@ -131,7 +131,7 @@ export default function App() {
 
     const fetchData = async () => {
       try {
-        const ingredientsResponse = await fetch('http://185.31.164.124/api/all_ingredients');
+        const ingredientsResponse = await fetch('http://localhost:8070/all_ingredients');
         if (ingredientsResponse.ok) {
           const ingredientsData = await ingredientsResponse.json();
           if (Array.isArray(ingredientsData) && ingredientsData.length > 0) {
@@ -139,7 +139,7 @@ export default function App() {
           }
         }
 
-        const methodsResponse = await fetch('http://185.31.164.124/api/all_cook_processes');
+        const methodsResponse = await fetch('http://localhost:8070/all_cook_processes');
         if (methodsResponse.ok) {
           const methodsData = await methodsResponse.json();
           if (Array.isArray(methodsData) && methodsData.length > 0) {
@@ -158,7 +158,7 @@ export default function App() {
 
   const handleLogin = async (values) => {
     try {
-      const response = await fetch('http://185.31.164.124/api/auth/login', {
+      const response = await fetch('http://localhost:8070/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values),
@@ -186,7 +186,7 @@ export default function App() {
 
   const handleRegister = async (values) => {
     try {
-      const response = await fetch('http://185.31.164.124/api/auth/register', {
+      const response = await fetch('http://localhost:8070/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values),
