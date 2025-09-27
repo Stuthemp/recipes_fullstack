@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = {"http://localhost:3000", "http://185.31.164.124"})
+@CrossOrigin(origins = "*")
 public class AuthController {
 
     @Autowired
