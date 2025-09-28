@@ -50,9 +50,8 @@ public class SecurityConfig {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeHttpRequests(authz -> authz
-                        .requestMatchers("/api/auth/**").permitAll()
-                        .requestMatchers("/api/login/**").permitAll()
-                        .requestMatchers("/api/all_ingredients").permitAll()
+                        .requestMatchers("/auth/**").permitAll()
+                        .requestMatchers("/all_ingredients").permitAll()
                         .requestMatchers("/all_cook_processes").permitAll()
                         .anyRequest().authenticated()
                 );
