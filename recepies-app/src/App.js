@@ -435,7 +435,7 @@ export default function App() {
     const jsonValues = JSON.stringify(incoming_request, null, 2);
     console.log(jsonValues);
 
-    fetch('http://localhost:8070/search', {
+    fetch('/api/search', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -480,7 +480,7 @@ export default function App() {
     const jsonValues = JSON.stringify(incoming_request, null, 2);
     console.log(jsonValues);
 
-    fetch('http://localhost:8070/create', {
+    fetch('/api/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
